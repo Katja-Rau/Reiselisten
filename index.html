@@ -1,15 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-  <title>Unsere private Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsere Familienseite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #dbeafe 0%, #c7d2fe 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .nav-active {
+            background-color: #3b82f6;
+            color: white;
+        }
+    </style>
 </head>
-<body>
-  <h1>Willkommen auf unserer Familienseite!</h1>
-  <ul>
-    <li><a href="rezepte.html">Lieblingsrezepte</a></li>
-    <li><a href="todo.html">ToDo-Liste</a></li>
-    <li><a href="ueber-uns.html">Über uns</a></li>
-    <li><a href="finanzen.html">Finanzübersicht</a></li>
-  </ul>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-center py-4 space-x-2">
+                <a href="index.html" class="nav-btn nav-active px-4 py-2 rounded text-sm font-medium transition-colors">
+                    🏠 Home
+                </a>
+                <a href="rezepte.html" class="nav-btn px-4 py-2 rounded text-sm font-medium bg-gray-100 hover:bg-gray-200 transition-colors">
+                    👨‍🍳 Rezepte
+                </a>
+                <a href="todo.html" class="nav-btn px-4 py-2 rounded text-sm font-medium bg-gray-100 hover:bg-gray-200 transition-colors">
+                    ☑️ ToDo
+                </a>
+                <a href="ueber-uns.html" class="nav-btn px-4 py-2 rounded text-sm font-medium bg-gray-100 hover:bg-gray-200 transition-colors">
+                    👥 Über uns
+                </a>
+                <a href="finanzen.html" class="nav-btn px-4 py-2 rounded text-sm font-medium bg-gray-100 hover:bg-gray-200 transition-colors">
+                    🧮 Finanzen
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="gradient-bg min-h-screen">
+        <div class="container mx-auto px-4 py-8">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="flex justify-center items-center mb-4">
+                    <span class="text-4xl">❤️</span>
+                    <h1 class="text-4xl font-bold text-gray-800 mx-4">Unsere Familienseite</h1>
+                    <span class="text-4xl">❤️</span>
+                </div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Willkommen auf unserer privaten Homepage! Hier findest du alles, was unsere Familie ausmacht.
+                </p>
+            </div>
+
+            <!-- Menu Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- Rezepte Card -->
+                <div class="bg-white rounded-lg shadow-md card-hover transition-all duration-300 border-0">
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">👨‍🍳</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Lieblingsrezepte</h3>
+                        <p class="text-gray-600 mb-4">Unsere besten Familienrezepte</p>
+                        <a href="rezepte.html" class="inline-block w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors">
+                            Öffnen
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ToDo Card -->
+                <div class="bg-white rounded-lg shadow-md card-hover transition-all duration-300 border-0">
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">☑️</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">ToDo-Liste</h3>
+                        <p class="text-gray-600 mb-4">Was wir noch erledigen müssen</p>
+                        <a href="todo.html" class="inline-block w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors">
+                            Öffnen
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Über uns Card -->
+                <div class="bg-white rounded-lg shadow-md card-hover transition-all duration-300 border-0">
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">👥</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Über uns</h3>
+                        <p class="text-gray-600 mb-4">Unsere Familiengeschichte</p>
+                        <a href="ueber-uns.html" class="inline-block w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors">
+                            Öffnen
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Finanzen Card -->
+                <div class="bg-white rounded-lg shadow-md card-hover transition-all duration-300 border-0">
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">🧮</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Finanzübersicht</h3>
+                        <p class="text-gray-600 mb-4">Unser Familienbudget im Überblick</p>
+                        <a href="finanzen.html" class="inline-block w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors">
+                            Öffnen
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="text-center mt-16 text-gray-500">
+                <p>Made with ❤️ für unsere Familie</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple script to handle active navigation state
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navBtns = document.querySelectorAll('.nav-btn');
+        
+        navBtns.forEach(btn => {
+            btn.classList.remove('nav-active');
+            btn.classList.add('bg-gray-100', 'hover:bg-gray-200');
+            
+            if (btn.href.includes(currentPage)) {
+                btn.classList.add('nav-active');
+                btn.classList.remove('bg-gray-100', 'hover:bg-gray-200');
+            }
+        });
+    </script>
 </body>
 </html>
